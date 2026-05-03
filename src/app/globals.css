@@ -1,0 +1,187 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #0a0a0a;
+  --card-background: #161616;
+  --checkbox-background: #222222;
+  --border-color: #242424;
+  --background-adjacent-color: #2e2e2e;
+  --checkbox-outline: #2a2a2a;
+  --checkbox-outline-hover: #323232;
+  --lightened-background-adjacent-color: #363636;
+  --second-degree-lightened-background-adjacent-color: #494949;
+  --subtle-color: #707070;
+  --foreground: #ffffff;
+  --slightly-subtle-foreground: #c5c5c5;
+  --theme-color: #119EED;
+  --theme-purple: #6011ED;
+  --theme-red: #ED1130;
+  --theme-green: #30ED11;
+  --theme-yellow: #EDCE11;
+  --muted-foreground: #aaaaaa;
+  --inner-general-rounding: 7px;
+  --general-rounding: 8px;
+  --moderate-rounding: 12px;
+  --outer-moderate-rounding: 12.56px;
+  --outer-card-radius: 18.2px;
+  --inner-card-radius: 18px;
+  --radius: 8px;
+}
+
+html,
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Inter', 'Helvetica Neue', Arial, 'sans-serif';
+}
+
+/* Success Checkmark Animation Fix */
+.success-checkmark {
+  width: 80px;
+  height: 115px;
+  margin: 0 auto;
+}
+.success-checkmark .check-icon {
+  width: 80px;
+  height: 80px;
+  position: relative;
+  border-radius: 50%;
+  box-sizing: content-box;
+  border: 4px solid var(--theme-green);
+}
+.success-checkmark .check-icon::before, .success-checkmark .check-icon::after {
+  content: "";
+  height: 100px;
+  position: absolute;
+  background: var(--card-background);
+  transform: rotate(-45deg);
+}
+.success-checkmark .check-icon::before {
+  top: 3px;
+  left: -2px;
+  width: 30px;
+  transform-origin: 100% 50%;
+  border-radius: 100px 0 0 100px;
+}
+.success-checkmark .check-icon::after {
+  top: 0;
+  left: 30px;
+  width: 60px;
+  transform-origin: 0 50%;
+  border-radius: 0 100px 100px 0;
+  animation: rotate-circle 4.25s ease-in;
+}
+.success-checkmark .check-icon .icon-line {
+  height: 5px;
+  background-color: var(--theme-green);
+  display: block;
+  border-radius: 2px;
+  position: absolute;
+  z-index: 10;
+}
+.success-checkmark .check-icon .icon-line.line-tip {
+  top: 46px;
+  left: 14px;
+  width: 25px;
+  transform: rotate(45deg);
+  animation: icon-line-tip 0.75s;
+}
+.success-checkmark .check-icon .icon-line.line-long {
+  top: 38px;
+  right: 8px;
+  width: 47px;
+  transform: rotate(-45deg);
+  animation: icon-line-long 0.75s;
+}
+.success-checkmark .check-icon .icon-circle {
+  top: -4px;
+  left: -4px;
+  z-index: 10;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 4px solid rgba(48, 237, 17, 0.5);
+  box-sizing: content-box;
+  position: absolute;
+}
+.success-checkmark .check-icon .icon-fix {
+  top: 8px;
+  width: 5px;
+  left: 26px;
+  z-index: 1;
+  height: 85px;
+  position: absolute;
+  transform: rotate(-45deg);
+  background-color: var(--card-background);
+}
+
+/* Error Icon Animation */
+.error-checkmark {
+  width: 80px;
+  height: 115px;
+  margin: 0 auto;
+}
+.error-checkmark .error-icon {
+  width: 80px;
+  height: 80px;
+  position: relative;
+  border-radius: 50%;
+  box-sizing: content-box;
+  border: 4px solid var(--theme-red);
+}
+.error-checkmark .error-icon .icon-line {
+  height: 5px;
+  background-color: var(--theme-red);
+  display: block;
+  border-radius: 2px;
+  position: absolute;
+  z-index: 10;
+  top: 38px;
+  width: 47px;
+}
+.error-checkmark .error-icon .icon-line.line-left {
+  left: 17px;
+  transform: rotate(45deg);
+}
+.error-checkmark .error-icon .icon-line.line-right {
+  right: 17px;
+  transform: rotate(-45deg);
+}
+
+@keyframes icon-line-tip {
+  0% { width: 0; left: 1px; top: 19px; }
+  54% { width: 0; left: 1px; top: 19px; }
+  70% { width: 50px; left: -8px; top: 37px; }
+  84% { width: 17px; left: 21px; top: 48px; }
+  100% { width: 25px; left: 14px; top: 45px; }
+}
+@keyframes icon-line-long {
+  0% { width: 0; right: 46px; top: 54px; }
+  65% { width: 0; right: 46px; top: 54px; }
+  84% { width: 55px; right: 0px; top: 35px; }
+  100% { width: 47px; right: 8px; top: 38px; }
+}
+@keyframes rotate-circle {
+  0% { transform: rotate(-45deg); }
+  5% { transform: rotate(-45deg); }
+  12% { transform: rotate(-405deg); }
+  100% { transform: rotate(-405deg); }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-track {
+  background: var(--background-adjacent-color);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--theme-color);
+  border-radius: 10px;
+}
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--theme-color) var(--background-adjacent-color);
+}
