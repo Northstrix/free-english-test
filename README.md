@@ -1,6 +1,10 @@
 # Free English Test
 100% Free English Proficiency Test Made Using [Next.js](https://nextjs.org/), [Perplexity](https://www.perplexity.ai/), and [Firebase Studio](https://firebase.studio/).
 
+SourceForge page: https://sourceforge.net/projects/free-english-test/
+
+Check it out at: https://free-english-test.vercel.app
+
 ![Alt Hero Section](https://raw.githubusercontent.com/Northstrix/free-english-test/refs/heads/main/hero-section.webp)
 
 ![Alt Result Page](https://raw.githubusercontent.com/Northstrix/free-english-test/refs/heads/main/result-page.webp)
