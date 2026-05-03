@@ -135,7 +135,7 @@ export default function ResultRevealCard({
         <div className="space-y-3">
           {atLeastA1 ? (
             <>
-              <h3 className="text-[var(--subtle-color)] text-[13px] font-bold tracking-widest px-1 lowercase text-center">detailed breakdown</h3>
+              <h3 className="text-[var(--subtle-color)] text-[13px] font-bold tracking-widest px-1">Detailed Breakdown:</h3>
               <div className="space-y-2">
                 {perLevelScores.map((levelScore) => (
                   <div
