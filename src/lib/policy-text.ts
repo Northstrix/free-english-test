@@ -1,6 +1,6 @@
 export const TERMS_OF_SERVICE = `
 Terms of Service for the 100% Free English Level Test (A1-C2)
-Last Updated: May 3rd, 2024
+Last Updated: May 3rd, 2026
 
 1. Acceptance of Terms
 By accessing or using the 100% Free English Level Test (A1-C2) web application (the “Assessment”), you agree to be bound by these Terms of Service. If you do not accept these terms, you must not use the Assessment. Use, completion, or submission of the Assessment constitutes acceptance of these Terms of Service.
@@ -33,7 +33,7 @@ These Terms of Service may be updated at any time. Continued use of the Assessme
 
 export const PRIVACY_POLICY = `
 Privacy Policy for the 100% Free English Level Test (A1-C2)
-Last Updated: May 3rd, 2024
+Last Updated: May 3rd, 2026
 
 1. Scope
 This Privacy Policy explains how information is collected, used, disclosed, and transferred when the Assessment is accessed or used. By using the Assessment, you acknowledge the practices described in this Policy. Technical data collection begins automatically through Vercel Analytics as soon as the web application loads.
